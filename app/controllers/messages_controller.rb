@@ -3,7 +3,6 @@ class MessagesController < ApplicationController
   
   def index
     @message = Message.new
-    
     @messages = Message.all
   end
   
@@ -39,7 +38,7 @@ class MessagesController < ApplicationController
   
   private
   def message_params
-    params.require(:message).permit(:name, :body)
+    params.require(:message).permit(:name, :body, :age)
   end
   
   def set_message
